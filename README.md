@@ -1,66 +1,135 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# IResume
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+IResume is a personal résumé / portfolio web application originally built with Laravel. It was one of my early projects with Laravel and demonstrates basic full‑stack web application patterns (authentication, CRUD, file uploads, and a simple administrative UI). I created this project last year while learning Laravel.
 
-## About Laravel
+Important notes about the project
+- I built this project last year with Laravel. It was an early learning project.
+- I no longer specialize in Laravel — I have since moved to .NET — so I may not remember all implementation details.
+- The codebase may contain bugs, rough edges, or older Laravel idioms. Treat this repository as archive-quality example work rather than a production-ready system.
+- I consider this project a good showcase for my résumé despite the caveats above.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Table of contents
+- About
+- Features
+- Tech stack
+- Getting started
+- Environment & configuration
+- Database
+- Common commands
+- Testing
+- Known issues & limitations
+- Recommended improvements
+- Contributing
+- License
+- Contact
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+About
+This repository contains the source code for a résumé/portfolio site. It includes:
+- A public-facing résumé and portfolio pages.
+- An admin area to manage content (projects, experience, education).
+- Basic authentication and file upload support.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Features
+- Public résumé pages (experience, education, skills, projects).
+- Admin CRUD for résumé sections and portfolio items.
+- Authentication for admin access.
+- File uploads (e.g., project images, profile photo).
+- Simple responsive layout (mobile-first).
 
-## Learning Laravel
+Tech stack
+- PHP (Laravel framework)
+- Composer for PHP dependency management
+- MySQL or other relational database supported by Laravel
+- Blade templates for server-rendered views
+- HTML / CSS / basic JavaScript
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Getting started (quick)
+These instructions assume a Unix-like environment. Adjust for Windows as needed.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. Clone the repo
+```bash
+git clone https://github.com/cheloei/IResume.git
+cd IResume
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Install PHP dependencies
+```bash
+composer install
+```
 
-## Laravel Sponsors
+3. Copy environment file and set keys
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+4. Configure your .env
+- Set DB_CONNECTION, DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, DB_PASSWORD
+- Update MAIL_ settings if email is required
 
-### Premium Partners
+5. Run migrations (and optionally seeders)
+```bash
+php artisan migrate
+php artisan db:seed   # optional if seeders are available
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+6. Run the application
+```bash
+php artisan serve
+# Visit http://127.0.0.1:8000
+```
 
-## Contributing
+Environment & configuration
+- PHP >= 7.3 or 8.x (check composer.json for exact constraints)
+- Composer
+- A SQL database supported by Laravel (MySQL recommended)
+- If you prefer Docker, add a docker-compose file or use a community Laravel Docker template (not included)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Database
+- Migration files are included (check database/migrations).
+- There may be seeders to create sample content; if not, create an admin user via tinker or a database insert.
 
-## Code of Conduct
+Common artisan commands
+- php artisan migrate --force (use with care)
+- php artisan migrate:refresh
+- php artisan tinker
+- php artisan storage:link (if file storage is used)
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Known issues & limitations
+- I wrote this project when I was learning Laravel. The code may contain:
+  - Non-idiomatic patterns or older Laravel approaches
+  - Missing or thin validation in places
+  - Limited or no automated tests
+  - Unhandled edge cases and potential bugs
+- I do not actively maintain this repository — I have moved my focus to .NET — so I may not be able to fix issues promptly.
+- Use this repo primarily as a learning/resume artifact rather than a production-ready product.
 
-## Security Vulnerabilities
+Recommended improvements (if you want to update it)
+- Add a test suite (unit/feature tests).
+- Harden validation and authorization checks.
+- Replace any deprecated Laravel APIs with current equivalents.
+- Add CI (GitHub Actions) to run tests and static analysis.
+- Improve frontend (use a component library or SPA framework if desired).
+- Add Docker configuration for reproducible local development.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Contributing
+- I welcome improvements by others. If you open issues or PRs, please:
+  - Describe the change clearly.
+  - Keep changes focused and small.
+  - Add or update tests when applicable.
+- Note: I may be slow to review changes because I’m not actively using Laravel day-to-day.
 
-## License
+License
+- This repository is provided "as-is" for demonstration and learning.
+- Add a LICENSE file (MIT is common) if you want to permit reuse. If no license is present, assume "All rights reserved."
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Contact
+- Author: cheloei
+- GitHub: https://github.com/cheloei
+
+Acknowledgements
+- Built with the Laravel framework and community packages. Thank you to the maintainers of Laravel and its ecosystem.
+
+Final notes
+This project was an important learning step for me in web development and Laravel. Although I’ve since transitioned to .NET and may not remember every detail, I keep this repository as a résumé piece and welcome constructive improvements from the community.
