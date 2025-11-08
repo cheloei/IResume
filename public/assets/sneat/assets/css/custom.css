@@ -1,0 +1,100 @@
+body {
+    background: #e8cbc0;
+    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
+    background: linear-gradient(to right, #e8cbc0, #636fa4);
+    min-height: 100vh;
+}
+
+.card{
+    background-color: white;
+    border: 0;
+    box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+    border-radius: 7px;
+    background-clip: border-box;
+    border: 1px solid #e6e4e9;
+    padding: .5rem;
+    overflow-y: auto;
+}
+
+.flow-less{
+    overflow-y: unset !important;
+}
+
+.card .card-header {
+    background: none;
+    padding: 0 0.9375rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+}
+
+.btn-buy-now {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.menu-link{
+    display: flex;
+    justify-content: space-between;
+}
+form *{
+    direction: rtl;
+}
+#profileBox, #posterBox, .ePosterBox {
+    background-image: url('../img/user.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: .5rem;
+}#profileBox{
+    border-radius: 50%;
+}
+#posterBox, .ePosterBox{
+    background-image: url('../img/nature.jpg');
+    width: 200px;
+    background-size: 100% 200px;
+}
+
+textarea{
+    min-height: 200px !important;
+    max-height: 200px ;
+}
+.input-group{
+    direction: ltr !important;
+}
+.is-invalid{
+    border: red dotted 1px !important;
+}
+label{
+    font-size: 14px !important;
+    font-style: italic;
+    margin-top: .75rem !important;
+    margin-bottom: .75rem !important;
+}
+.require{
+    color: red;
+}
+input, textarea{
+    text-align: right;
+}input[type='email'], input[type='password'], input[type='url']{
+    text-align: left !important;
+}
+::placeholder{
+    direction: rtl;
+    text-align: right;
+}
+#loading div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.hidden{
+    opacity: 0 !important;
+    display: none !important;
+}

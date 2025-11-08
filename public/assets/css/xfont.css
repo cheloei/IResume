@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'xfont';
+    font-style: normal;
+    /*font-weight: 900;*/
+    font-display: block;
+    src:  url("../font/xfont-Regular.ttf") format("truetype"); 
+}
+
+@font-face {
+    font-family: 'txt';
+    font-style: normal;
+    /*font-weight: 900;*/
+    font-display: block;
+    src:  url("../font/Vazir-Regular.ttf") format("truetype"); 
+}
+*{
+    font-family: 'txt';
+}
+
+.fs-1{
+    font-size: 1em !important;
+}
+.fs-1-5{
+    font-size: 1.25rem !important;
+}
+.fs-2{
+    font-size: 1.5em !important;
+}
+.fs-3{
+    font-size: 2em !important;
+}
+
+.xf{
+    font-family: 'xfont';
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto; 
+}
+  
+
+
+.xf-robika::before{
+    content:"\E000";
+}
+.xf-robika-alt::before{
+    content:"\E001";
+}
+
+.xf-bale::before{
+    content:"\E002";
+}
+.xf-bale-alt::before{
+    content:"\E003";
+}
+
+.xf-eitaa::before{
+    content:"\E004";
+}
+
+.xf-aparat::before{
+    content:"\E005";
+}
+
+.xf-aparat-alt::before{
+    content:"\E006";
+}
+
+.xf-basalam::before{
+    content:"\E007";
+}
+
+.xf-basalam-alt::before{
+    content:"\E008";
+}
+
+.xf-bluebank::before{
+    content:"\E009";
+}
+
+.xf-mellibank::before{
+    content:"\E00A";
+}
+.xf-mellibank-alt::before{
+    content:"\E00B";
+}
+
+.xf-mellatbank::before{
+    content:"\E00C";
+}
+.xf-mellatbank-alt::before{
+    content:"\E00D";
+}
+
+.xf-esam::before{
+    content:"\E00E";
+}
+
+.xf-gap::before{
+    content:"\E00F";
+}
+
+.xf-post::before{
+    content:"\E010";
+}
+
+.xf-torob::before{
+    content:"\E011";
+}
+
+.xf-divar::before{
+    content:"\E012";
+}
+
+.xf-tipax::before{
+    content:"\E013";
+}
+.xf-tipax-alt::before{
+    content:"\E014";
+}
+
+.xf-tapsi::before{
+    content:"\E016";
+}
+
+.xf-tapsi-alt::before{
+    content:"\E015";
+}
+
+.xf-alopeyk::before{
+    content:"\E017";
+}
+
+.xf-alopeyk-alt::before{
+    content:"\E018";
+}
+
+.xf-snapp::before{
+    content:"\E019";
+}
+
+.xf-snapp-alt::before{
+    content:"\E01A";
+}

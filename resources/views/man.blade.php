@@ -1,0 +1,178 @@
+@extends('layouts.baseHtml')
+@section('bootstrap-less', true)
+@section('title', 'رزومه به سبک متفاوت')
+@section('head')
+    <link href="{{ asset('assets/main/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/main/assets/css/templatemo-chain-app-dev.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/main/assets/css/animated.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/main/assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/main/assets/css/custom.css') }}">
+@endsection
+@section('content')
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s" dir="rtl">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="{{ asset('assets/main/assets/images/logo.png') }}" class="logo" alt="Chain App Dev">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">خانه</a></li>
+                            <li class="scroll-to-section"><a href="#services">امکانات</a></li>
+                            <li>
+                                <div class="gradient-button"><a href="{{ route('login') }}"><i
+                                            class="fa fa-sign-in-alt"></i> شروع
+                                        کنید</a></div>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>منو</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    </div>
+
+    <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row" dir="rtl">
+                        <div class="col-lg-6 align-self-center">
+                            <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s"
+                                data-wow-delay="1s">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2>قضاوت رو برای مخاطبان راحت تر کن !</h2>
+                                        <p>
+                                            با استفاده از رزومه و یک وبلاگ با مطالب خوب , سطح مهارت و دانشت برای مخاطباتت
+                                            آشکار میشه و احتمال
+                                            اینکه اون مخاطب به مشتری تبدیل بشه بیشتره ; اگر ی زومه متفاوت میخوای , سرویس آی
+                                            رزومه یکی از
+                                            بهترین انتخاب هاست ; میگید چرا ؟ پس ادامه رو بخون
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <img src="{{ asset('assets/main/assets/images/slider-dec.png') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" dir="rtl" class="services section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <h4>:) ی رزومه <em>جذاب و متفاوت</em> داشته باش</h4>
+                        <img src="{{ asset('assets/main/assets/images/heading-line-dec.png') }}" alt="">
+                        <p>
+                            اولین شرط برای استخدام , رزومه خوبه <br>
+                            وقتی که کلی رزومه ساز وجود داره , چرا باید از آی رزومه استفاده کنیم ؟
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row d-flex flex-wrap justify-content-center">
+                <div class="col-lg-3">
+                    <div class="service-item first-service">
+                        <div class="icon"></div>
+                        <h4>رایگان</h4>
+                        <p> حرفه ای اما رایگان :) استفاده از امکانات آی رزومه کاملا رایگانه !</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-item second-service">
+                        <div class="icon"></div>
+                        <h4>سریع باش !</h4>
+                        <p>
+                            با آی رزومه , خیلی سریع رزمت رو به صورت چاپی و وبسایت شخصی داشته باش ! چی از این بهتر ؟
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="service-item third-service">
+                        <div class="icon"></div>
+                        <h4>وبلاگ</h4>
+                        <p>آی رزومه , به ازای هر رزومه یک وبلاگ هم به شما میده <br>
+                            طبق مبحث اصول بازاریابی و فروش , یکی از راه های جذب اعتماد مخاطب , مطالب رایگانی است که داخل
+                            فضای مجازی قرار مدهم و از این طریق مخاطب به دانش ما پی میبرد <br>
+                            پس از این مطلب میتوان نتیجه گرفت که این قابلیت عالیه :)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="newsletter" dir="rtl">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-3">
+                    <div class="footer-widget">
+                        <h4>درباره ما</h4>
+                        <div class="logo">
+                            <img src="{{ asset('assets/main/assets/images/logo.png') }}" class="d-block mx-auto logo"
+                                alt="">
+                        </div>
+                        <p>
+                            این سرویس توسط ابوالفضل چلویی توسعه داده شده <br> لطفا پیشنهاد های سازنده خود رو برام بفرستید :
+                        <div class="text-white" dir="ltr">
+                            <span><i class="fa fa-envelope"></i> e.cheloei@gmail.com</span> <br> <span><i
+                                    style="transform: rotate(90deg);" class="fa fa-phone"></i> 09101841525</span>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="copyright-text">
+                        <p>
+                            &copy; تمتمی حقوق این سرویس نزد توسعه دهنده محفوظ است
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+@endsection
+@section('script')
+    <script src="{{asset('assets/main/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/main/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/main/assets/js/owl-carousel.js')}}"></script>
+    <script src="{{asset('assets/main/assets/js/animation.js')}}"></script>
+    <script src="{{asset('assets/main/assets/js/imagesloaded.js')}}"></script>
+    <script src="{{asset('assets/main/assets/js/popup.js')}}"></script>
+    <script src="{{asset('assets/main/assets/js/custom.js')}}"></script>
+@endsection

@@ -1,0 +1,13 @@
+.offset-lg-2 {
+    margin-right: 16.66666667%;
+}
+.service-item .icon{
+    background-size: cover;
+}
+.service-item{
+    height: 100%;
+}
+.logo{
+    width: 75px;
+    height: 75px;
+}

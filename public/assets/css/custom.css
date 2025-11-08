@@ -1,0 +1,25 @@
+input {
+    text-align: right;
+}
+
+input[type='email'],
+input[type='password'],
+input[type='url'] {
+    text-align: left !important;
+}
+
+::placeholder {
+    direction: rtl;
+    text-align: right;
+}
+
+#print-section {
+    padding: 0 !important;
+}
+#print-section .wrapper{
+    box-shadow: none !important;
+}
+.print-container{
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+}
